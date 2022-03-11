@@ -1,0 +1,30 @@
+.hero-img {
+	width: 100vw;
+	background-color: #555;
+
+	@media screen and (min-width: 900px) {
+		order: 1;
+		width: calc((610 * 100%) / 1440);
+		min-height: 100vh;
+		// visibility: hidden;
+
+		picture {
+			height: 0px;
+		}
+	}
+
+	img {
+		width: 100vw;
+		max-height: 250px;
+		object-fit: cover;
+		object-position: top;
+
+		@media screen and (min-width: 900px) {
+			width: 100%;
+			// max-height: 100%;
+			min-height: 100vh;
+			// object-fit: revert;
+			object-position: revert;
+		}
+	}
+}

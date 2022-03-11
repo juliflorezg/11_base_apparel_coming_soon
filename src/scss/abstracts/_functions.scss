@@ -1,0 +1,8 @@
+@use 'sass:math';
+
+// https://css-tricks.com/snippets/sass/px-to-em-functions/
+// function to pass a number in pixels and return size in rem units (optionally takes another parameter which is what 1 rem is in pixels)
+
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
